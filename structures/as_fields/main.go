@@ -1,25 +1,25 @@
 package main
+
 import (
-  "fmt"
+	"fmt"
 )
 
 type Saiyan struct {
-  Name string
-  Power int
-  Father *Saiyan
+	Name   string
+	Power  int
+	Father *Saiyan
 }
 
-
 func main() {
-  gohan := &Saiyan{
-    Name: "Gohan",
-    Power: 1000,
-    Father: &Saiyan {
-      Name: "Goku",
-      Power: 9001,
-      Father: nil,
-      },
-  }
+	gohan := &Saiyan{
+		Name:  "Gohan",
+		Power: 1000,
+		Father: &Saiyan{
+			Name:   "Goku",
+			Power:  9001,
+			Father: nil,
+		},
+	}
 
-  fmt.Println(gohan.Father.Power)
+	fmt.Println(gohan.Father.Power)
 }
